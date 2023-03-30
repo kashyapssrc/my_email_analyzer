@@ -21,7 +21,8 @@ def email_file_with_no_attachments(email_file_path: str):
 
     metrics = mail_analyzer.get_email_metrics(parsed_email=processed_mail)
     formatted_output = json.dumps(metrics, indent=4)
-    print(f'The Email Metrics are as follows:/n {formatted_output}')
+    print(f'\nUse Case - 1 output:\n'
+          f'The Email Metrics for .eml file without attachments as follows:\n {formatted_output}')
 
 
 def email_file_with_attachments(email_file_path: str):
@@ -31,7 +32,8 @@ def email_file_with_attachments(email_file_path: str):
 
     metrics = mail_analyzer.get_email_metrics(parsed_email=processed_mail)
     formatted_output = json.dumps(metrics, indent=4)
-    print(f'The Email Metrics are as follows:/n {formatted_output}')
+    print(f'\nUse Case - 2 output:\n'
+          f'The Email Metrics for .eml file with attachments as follows:\n {formatted_output}')
 
 
 def directory_containing_email_files_with_and_without_attachments(dir_path: str):
@@ -41,7 +43,8 @@ def directory_containing_email_files_with_and_without_attachments(dir_path: str)
 
     metrics = mail_analyzer.get_email_metrics(parsed_email=processed_mail)
     formatted_output = json.dumps(metrics, indent=4)
-    print(f'The Email Metrics are as follows:/n {formatted_output}')
+    print(f'\nUse Case - 3 output:\n'
+          f'The Metrics when directory path is given as input path:\n {formatted_output}')
 
 
 if __name__ == '__main__':
